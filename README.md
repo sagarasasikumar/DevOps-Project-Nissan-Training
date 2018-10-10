@@ -15,7 +15,8 @@ The command will create a my-devops-project folder in the respective system whic
 4.Go inside the pom file and configure settings for nexus deployment of the project.
 
 5.Complete the lifecyle in maven by executing following commands,
-                                mvn clean compile
+                               
+			       mvn clean compile
 				
 				mvn clean test
 				
@@ -30,8 +31,8 @@ The command will create a my-devops-project folder in the respective system whic
 7.Goto Jenkins [localhost:8090] and create a new project and start the build there.
 
 8.Create a new repository in Github and push the code;
-
-                                git init
+				
+				git init
 				
 				git add .
 				
