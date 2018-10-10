@@ -5,7 +5,7 @@ import java.text.NumberFormat;
  * Hello world!
  *
  */
-public class App 
+public class App
 {
 
 	public final static String[] units = { "", "One", "Two", "Three", "Four",
@@ -29,14 +29,18 @@ public class App
 	public static String toWords( int n ) {
 		//String result = "" ;
 		//return result.trim() ;
-		
+//		    if(n==0) {
+//		    	 
+//		    	return "Zero";
+//	    }
 			if (n < 0) {
-				return "Minus " + toWords(-n);
+				return "Error";
 				//return null;
 			}
 
 			if (n < 20) {
 				return units[n];
+	
 			}
 
 			if (n < 100) {
@@ -54,8 +58,15 @@ public class App
 			if (n < 10000000) {
 				return toWords(n / 100000) + " Lakh" + ((n % 100000 != 0) ? " " : "") + toWords(n % 100000);
 			}
+			
+//			if(n > 9999999999)
+//			{
+//				return "Error";
+//			}
 
 			return toWords(n / 10000000) + " Crore" + ((n % 10000000 != 0) ? " " : "") + toWords(n % 10000000);
+			
+			
 		}
 	
 
@@ -65,7 +76,7 @@ public class App
 	Scanner s=new Scanner(System.in);
     System.out.println("Enter a number to convert into word format");
 	n =s.nextInt();
-	System.out.println(NumberFormat.getInstance().format(n) + "='" + toWords(n) + "'");
+	System.out.println(toWords(n) + "");
 
     }
 }
